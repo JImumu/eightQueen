@@ -1,10 +1,7 @@
 const check = (x, y, checkerboard) => {
     let safe = true
     for (let i = 0; i < checkerboard.length; i++) {
-      if (checkerboard[i].x === x || checkerboard[i].y === y) {
-          safe = false
-          break
-      } else if (Math.abs(checkerboard[i].x - x) === Math.abs(checkerboard[i].y - y)) {
+      if ((checkerboard[i].x === x || checkerboard[i].y === y) || Math.abs(checkerboard[i].x - x) === Math.abs(checkerboard[i].y - y)) {
           safe = false
           break
       }
